@@ -53,6 +53,7 @@ public class Telacadastro extends javax.swing.JFrame {
         txtSenha = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +105,13 @@ public class Telacadastro extends javax.swing.JFrame {
 
         jButton2.setText("Limpa");
 
+        jButton3.setText("Login");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -135,6 +143,10 @@ public class Telacadastro extends javax.swing.JFrame {
                             .addComponent(txtEmail)
                             .addComponent(txtSenha))))
                 .addGap(304, 304, 304))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(381, 381, 381)
+                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,7 +174,9 @@ public class Telacadastro extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(funcionario)
                     .addComponent(gerente))
-                .addGap(88, 88, 88)
+                .addGap(48, 48, 48)
+                .addComponent(jButton3)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -264,6 +278,10 @@ public class Telacadastro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -307,6 +325,7 @@ public class Telacadastro extends javax.swing.JFrame {
     private javax.swing.JCheckBox gerente;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

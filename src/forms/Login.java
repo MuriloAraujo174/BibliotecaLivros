@@ -4,6 +4,7 @@
  */
 package forms;
 
+import beans.PacoteCadastroFuncionarios;
 import dao.LoginDao;
 import javax.swing.JOptionPane;
 
@@ -124,15 +125,31 @@ public class Login extends javax.swing.JFrame {
         String email = txtEmail.getText();
         String senha = txtSenha.getText();
         
+        PacoteCadastroFuncionarios usuario = new PacoteCadastroFuncionarios();
+        
+        
+        
+        
+        
         
         try {
             if(email.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Campo vazio");
+            } else {
+                usuario.getLogin().setEmail(email);
             }
             
             if(senha.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Campo vazio");
+            } else {
+                usuario.getLogin().setSenha(senha);
             }
+            
+            if(usuario != null) {
+                JOptionPane.showMessageDialog(null, "Login foi feito com sucesso");
+                new Home().setVisible(true);
+            }
+            
         } catch (Exception e) {
         }
         
