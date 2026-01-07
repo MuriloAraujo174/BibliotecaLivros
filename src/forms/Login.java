@@ -5,6 +5,7 @@
 package forms;
 
 import dao.LoginDao;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -124,6 +125,16 @@ public class Login extends javax.swing.JFrame {
         String senha = txtSenha.getText();
         
         
+        try {
+            if(email.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Campo vazio");
+            }
+            
+            if(senha.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Campo vazio");
+            }
+        } catch (Exception e) {
+        }
         
         
         
